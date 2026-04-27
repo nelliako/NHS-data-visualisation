@@ -62,13 +62,16 @@ These attributes were chosen to evaluate the realities and cost of care.
 #### color 
 
 -Overview ("all") - mapped to a categorical palette, where each unique colour represents a specific Diagnostic Chapter.
+
 -Highlight (specific selection) - mapped to a binary palette. A high-contrast red is mapped to the "Selected" chapter, while a neutral light grey is mapped to "Background" data to reduce visual noise.
 
 #### path
 
 -Path (line) - mapped to Chapter Description. This connects the individual data points across the X-axis to form a continuous line. 
 hierarchy & interaction
+
 -Parameter control - determines which data mark is brought to the front of the visualisation, the "Selected" red line is forced to the top of the screen so it is never obscured by the grey background lines.
+
 -Dynamic visibility - the colour legend is mapped to the Parameter state, appearing or changing only when "All" diagnostic groups are chosen.
 
 ### Unique Observation: 
