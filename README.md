@@ -28,24 +28,35 @@ Justification:
 
 I chose them because I aimed at creating a comprehensive 360-degree view of the NHS Mental Health service. By including these variables, the visualisation tells a complete story of the patient journey: from who the patients are to how they enter the system and how long they stay.
 
+
 -The demographic profile (Mean Age, % Male, % Female):
+
 These attributes were chosen to establish the clinical who for each diagnosis.
 By mapping Age and Gender, the chart reveals clinical special clinical features, such as the pediatric focus of developmental disorders versus the geriatric focus of organic disorders.
 
+
 -Operational demand and access (Total FCEs, Waiting List Size, Mean Wait Time)
+
 These variables were chosen to measure the systemic pressure on the NHS.
+
 --Total FCE (Volume): chosen to distinguish between high-volume mass services (like Mood Disorders) and low-volume specialised services.
+
 --Waiting List (size - patients & number of days): these are the primary indicators of access barriers. Including both allows the viewer to see the waiting time problem, where a condition might have a small waiting list but a long waiting time, which is a much more critical insight than list size alone.
 
+
 -Care pathway and intensity (% Day Cases, % Emergency, Mean LOS)
+
 These attributes were chosen to evaluate the realities and cost of care.
+
 --Day Case & Emergency %: this tells if a service is proactive (planned day cases) or reactive (emergency admissions). High emergency rates usually signal a system under stress or a lack of community-based prevention.
-Mean Length of Stay (LOS): this was chosen as the measure of clinical severity and resource consumption. 
+
+--Mean Length of Stay (LOS): this was chosen as the measure of clinical severity and resource consumption. 
 
 ### Visual mappings:
 -position (x, y axes) 
 
 --X-Axis - mapped to Measure Names. Each position represents a distinct NHS metric (e.g., Mean Age, Wait Times, Length of Stay).
+
 --Y-Axis - mapped to Measure Values. Each point on the vertical line represents the magnitude of that metric. These are normalised (scaled 0 to 1) to allow for the comparison of different units (years vs. days vs. percentages) on a single shared plane.
 
 -color 
@@ -75,9 +86,9 @@ My visualisation focuses on 3 questions:
 
 --The parallel coordinates plot reveals that waitlist size is often a poor proxy for service efficiency. This bottleneck is visually proven when the Wait Time line sits significantly higher than List Size. This justifies that simply reducing the number of people on a list won't improve services where delays are driven by clinical complexity rather than administrative backlogs. Again with the Schizophrenia line overtakes other chapters by climbing from an average list size to a 80-day wait, proving the system requires increased specialised bed capacity and assessment approach, not just a shorter waiting list. [1:05]
 
---Q3 - Is the care for this specific diagnosis primarily planned (Day cases) or reactive (Emergency cases)?
+-Q3 - Is the care for this specific diagnosis primarily planned (Day cases) or reactive (Emergency cases)?
 
-There is a visible V-shape between Day cases % and Emergency cases % axis in “All” year and “All” diagnostic groups: very few lines sit high on the Day Case axis. Most lines will dip at Day Cases and spike at Emergency Cases. This could be a sign that the NHS mental health system is reactive. Mood [affective] disorders and Schizophrenia typically show an “inverted V", meaning they have nearly 0% planned day cases and over 50–60% emergency admissions. [1:20]
+--There is a visible V-shape between Day cases % and Emergency cases % axis in “All” year and “All” diagnostic groups: very few lines sit high on the Day Case axis. Most lines will dip at Day Cases and spike at Emergency Cases. This could be a sign that the NHS mental health system is reactive. Mood [affective] disorders and Schizophrenia typically show an “inverted V", meaning they have nearly 0% planned day cases and over 50–60% emergency admissions. [1:20]
 
 ### Data Preparation: 
 I used Python scripts to extract Chapter 5 codes across all years and collect them all in one spreadsheet in formats suitable for Parallel Coordinates plot and supplementary visualisations. I also normalised all the values in Tableau.
