@@ -6,9 +6,6 @@ Link to Tableau: https://public.tableau.com/app/profile/nellia.kornilova/viz/NHS
 ### Visual Design Type: 
 Parallel Coordinates plot
 
-### Name of Tool: 
-Tableau
-
 ### Focus Cohort: Years, Age Groups, and/or Genders: 
 The years (time period) of hospital admissions shown: 1998-2024
 the age groups shown: entire population
